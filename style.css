@@ -1,0 +1,1133 @@
+/*
+Theme Name: Flight Report
+Theme URI: http://underscores.me/
+Author: Nesho Sabakov
+Author URI: http://www.neshable.com
+Description: Fast and light theme for flight delays.
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: flight-report
+Tags:
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+
+Flight Report is based on Underscores http://underscores.me/, (C) 2012-2016 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
+*/
+
+
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Normalize
+# Typography
+# Elements
+# Forms
+# Navigation
+  ## Links
+  ## Menus
+# Accessibility
+# Alignments
+# Clearings
+# Widgets
+# Content
+  ## Posts and pages
+  ## Comments
+# Infinite scroll
+# Media
+  ## Captions
+  ## Galleries
+--------------------------------------------------------------*/
+
+
+/*
+Main Color Scheme:
+  #33A2AA - Main brand color;
+  #008B95 - Main brand color / Darker shade;
+  #E37222 - Main CTA color;
+  #E98E4E - Main CTA color / Ligher shade;
+
+*/
+
+
+/*--------------------------------------------------------------
+# Normalize
+--------------------------------------------------------------*/
+
+html {
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+
+body {
+    margin: 0;
+}
+
+article,
+aside,
+details,
+footer,
+header,
+main,
+menu,
+nav,
+section,
+summary {
+    display: block;
+}
+
+a {
+    background-color: transparent;
+}
+
+a:active,
+a:hover {
+    outline: 0;
+}
+
+abbr[title] {
+    border-bottom: 1px dotted;
+}
+
+b,
+strong {
+    font-weight: bold;
+}
+
+dfn {
+    font-style: italic;
+}
+
+h1 {
+    font-size: 2em;
+    margin: 0.67em 0;
+}
+
+h3 {
+    font-size: 1.3rem;
+    margin: 0.5em 0;
+}
+
+mark {
+    background: #ff0;
+    color: #000;
+}
+
+small {
+    font-size: 80%;
+}
+
+sub,
+sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+}
+
+sup {
+    top: -0.5em;
+}
+
+sub {
+    bottom: -0.25em;
+}
+
+img {
+    border: 0;
+}
+
+svg:not(:root) {
+    overflow: hidden;
+}
+
+figure {
+    margin: 1em 40px;
+}
+
+hr {
+    box-sizing: content-box;
+    height: 0;
+}
+
+pre {
+    overflow: auto;
+}
+
+code,
+kbd,
+pre,
+samp {
+    font-family: monospace, monospace;
+    font-size: 1em;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+    color: inherit;
+    font: inherit;
+    margin: 0;
+}
+
+button {
+    overflow: visible;
+}
+
+button,
+select {
+    text-transform: none;
+}
+
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+    -webkit-appearance: button;
+    cursor: pointer;
+}
+
+button[disabled],
+html input[disabled] {
+    cursor: default;
+}
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+}
+
+input {
+    line-height: normal;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+    box-sizing: border-box;
+    padding: 0;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    height: auto;
+}
+
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+    -webkit-appearance: none;
+}
+
+fieldset {
+    border: 1px solid #c0c0c0;
+    margin: 0 2px;
+    padding: 0.35em 0.625em 0.75em;
+}
+
+legend {
+    border: 0;
+    padding: 0;
+}
+
+textarea {
+    overflow: auto;
+}
+
+optgroup {
+    font-weight: bold;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+td,
+th {
+    padding: 0;
+}
+
+
+/*--------------------------------------------------------------
+# Alignments
+--------------------------------------------------------------*/
+
+.alignleft {
+    display: inline;
+    float: left;
+    margin-right: 1.5em;
+}
+
+.marginleft {
+    margin-left: 0px;
+}
+
+.alignright {
+    display: inline;
+    float: right;
+    margin-left: 1.5em;
+}
+
+.aligncenter {
+    clear: both;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/*--------------------------------------------------------------
+# Clearings
+--------------------------------------------------------------*/
+
+.clear:before,
+.clear:after,
+.entry-content:before,
+.entry-content:after,
+.comment-content:before,
+.comment-content:after,
+.site-header:before,
+.site-header:after,
+.site-content:before,
+.site-content:after,
+.site-footer:before,
+.site-footer:after {
+    content: "";
+    display: table;
+    table-layout: fixed;
+}
+
+.clear:after,
+.entry-content:after,
+.comment-content:after,
+.site-header:after,
+.site-content:after,
+.site-footer:after {
+    clear: both;
+}
+
+
+/*--------------------------------------------------------------
+# Widgets
+--------------------------------------------------------------*/
+
+.widget {
+    margin: 0 0 1.5em;
+}
+
+
+/* Make sure select elements fit in widgets. */
+
+.widget select {
+    max-width: 100%;
+}
+
+
+/*--------------------------------------------------------------
+# Content
+--------------------------------------------------------------*/
+
+
+/*--------------------------------------------------------------
+## Posts and pages
+--------------------------------------------------------------*/
+
+.sticky {
+    display: block;
+}
+
+.hentry {
+    margin: 0 0 1.5em;
+}
+
+.byline,
+.updated:not(.published) {
+    display: none;
+}
+
+.single .byline,
+.group-blog .byline {
+    display: inline;
+}
+
+.page-content,
+.entry-content,
+.entry-summary {
+    margin: 1.5em 0 0;
+}
+
+.page-links {
+    clear: both;
+    margin: 0 0 1.5em;
+}
+
+
+/*--------------------------------------------------------------
+## Comments
+--------------------------------------------------------------*/
+
+.comment-content a {
+    word-wrap: break-word;
+}
+
+.bypostauthor {
+    display: block;
+}
+
+
+/*--------------------------------------------------------------
+# Infinite scroll
+--------------------------------------------------------------*/
+
+
+/* Globally hidden elements when Infinite Scroll is supported and in use. */
+
+.infinite-scroll .posts-navigation,
+
+/* Older / Newer Posts Navigation (always hidden) */
+
+.infinite-scroll.neverending .site-footer {
+    /* Theme Footer (when set to scrolling) */
+    display: none;
+}
+
+
+/* When Infinite Scroll has reached its end we need to re-display elements that were hidden (via .neverending) before. */
+
+.infinity-end.neverending .site-footer {
+    display: block;
+}
+
+
+
+/* Make sure embeds and iframes fit their containers. */
+
+embed,
+iframe,
+object {
+    max-width: 100%;
+}
+
+
+/*--------------------------------------------------------------
+## Captions
+--------------------------------------------------------------*/
+
+.wp-caption {
+    margin-bottom: 1.5em;
+    max-width: 100%;
+}
+
+.wp-caption img[class*="wp-image-"] {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.wp-caption .wp-caption-text {
+    margin: 0.8075em 0;
+}
+
+.wp-caption-text {
+    text-align: center;
+}
+
+
+/* From bootstrap v4 */
+
+
+/*!
+ * Start Bootstrap - Createive v4.0.0-alpha (http://startbootstrap.com/template-overviews/creative)
+ * Copyright 2013-2017 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-creative/blob/master/LICENSE)
+ */
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    font-family: 'Merriweather', 'Helvetica Neue', Arial, sans-serif;
+}
+
+hr {
+    border-color: #E37222;
+    border-width: 3px;
+    max-width: 50px;
+}
+
+hr.light {
+    border-color: white;
+}
+
+a {
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    transition: all 0.2s;
+    color: #33A2AA;
+}
+
+a:hover,
+a:focus {
+    color: #33A2AA;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
+}
+
+p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+
+/*Old color: #33A2AA */
+
+.bg-primary {
+    background-color: #008B95 !important;
+}
+
+.bg-dark {
+    background-color: #222222 !important;
+    color: white;
+}
+
+.text-faded {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+section {
+    padding: 50px 0;
+}
+
+.section-heading {
+    margin-top: 0;
+}
+
+.no-padding {
+    padding: 0;
+}
+
+::-moz-selection {
+    color: white;
+    text-shadow: none;
+    background: #222222;
+}
+
+::selection {
+    color: white;
+    text-shadow: none;
+    background: #222222;
+}
+
+img::selection {
+    color: white;
+    background: transparent;
+}
+
+img::-moz-selection {
+    color: white;
+    background: transparent;
+}
+
+body {
+    -webkit-tap-highlight-color: #222222;
+}
+.site {
+     min-height:90vh;
+}
+
+/* Logo size and position */
+
+.navbar-logo {
+    height: 50px;
+}
+
+
+/* CTA Text on the landing page */
+
+#mainNav .navbar-nonmenu {
+    color: #fff;
+    
+}
+.transparent {
+  background-color: transparent !important;
+    z-index: 3;
+}
+
+#mainNav .navbar-nonmenu .fa {
+    padding-right: 5px;
+}
+
+#mainNav {
+    background-color: #333;
+    border-color: rgba(34, 34, 34, 0.05);
+    font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    transition: all 0.2s;
+}
+
+#mainNav .navbar-brand {
+    color: #33A2AA;
+    font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+#mainNav .navbar-brand:hover,
+#mainNav .navbar-brand:focus {
+    color: #33A2AA;
+}
+
+#mainNav .navbar-toggle {
+    font-weight: 700;
+    font-size: 12px;
+    color: #222222;
+    text-transform: uppercase;
+}
+
+#mainNav .navbar-nav > li > a,
+#mainNav .navbar-nav > li > a:focus {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 13px;
+    color: #222222;
+}
+
+#mainNav .navbar-nav > li > a:hover,
+#mainNav .navbar-nav > li > a:focus:hover {
+    color: #33A2AA;
+}
+
+#mainNav .navbar-nav > li > a.current_page_item,
+#mainNav .navbar-nav > li > a:focus.current_page_item {
+    color: #33A2AA !important;
+    background-color: transparent;
+}
+
+#mainNav .navbar-nav > li > a.current_page_item:hover,
+#mainNav .navbar-nav > li > a:focus.current_page_item:hover {
+    background-color: transparent;
+}
+
+@media (min-width: 992px) {
+    #mainNav {
+        border-color: rgba(255, 255, 255, 0.3);
+    }
+    #mainNav .navbar-brand {
+        color: rgba(255, 255, 255, 0.7);
+    }
+    #mainNav .navbar-brand:hover,
+    #mainNav .navbar-brand:focus {
+        color: white;
+    }
+    #mainNav .navbar-nav > li > a,
+    #mainNav .navbar-nav > li > a:focus {
+        color: rgba(255, 255, 255, 0.7);
+    }
+    #mainNav .navbar-nav > li > a:hover,
+    #mainNav .navbar-nav > li > a:focus:hover {
+        color: white;
+    }
+    #mainNav.navbar-shrink {
+        background-color: white;
+        border-color: rgba(34, 34, 34, 0.05);
+    }
+    #mainNav.navbar-shrink .navbar-brand {
+        color: #33A2AA;
+        font-size: 16px;
+    }
+    #mainNav.navbar-shrink .navbar-brand:hover,
+    #mainNav.navbar-shrink .navbar-brand:focus {
+        color: #33A2AA;
+    }
+    #mainNav.navbar-shrink .navbar-nav > li > a,
+    #mainNav.navbar-shrink .navbar-nav > li > a:focus {
+        color: #222222;
+    }
+    #mainNav.navbar-shrink .navbar-nav > li > a:hover,
+    #mainNav.navbar-shrink .navbar-nav > li > a:focus:hover {
+        color: #33A2AA;
+    }
+}
+
+header.masthead {
+    position: relative;
+    width: 100%;
+    min-height: auto;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+    background-position: center;
+    background-image: url("img/header.jpg");
+    color: white;
+}
+
+header.masthead:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(34, 34, 34, 0.6);
+}
+
+header.masthead .header-content {
+    position: relative;
+    padding: 100px 15px 100px;
+    width: 100%;
+}
+
+header.masthead .header-content .header-content-inner h1 {
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 30px;
+}
+
+header.masthead .header-content .header-content-inner p {
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 16px;
+    margin-bottom: 50px;
+}
+
+@media (min-width: 768px) {
+    header.masthead {
+        height: 100%;
+        margin-top: -80px;
+        min-height: 600px;
+    }
+    header.masthead .header-content {
+        position: relative;
+        top: 50px;
+        padding: 100px 100px 0 100px;
+    }
+    header.masthead .header-content .header-content-inner {
+        max-width: 1000px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    header.masthead .header-content .header-content-inner h1 {
+        font-size: 50px;
+    }
+    header.masthead .header-content .header-content-inner p {
+        font-size: 18px;
+        max-width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media (max-width: 768px) { 
+  header.masthead {
+        margin-top: -80px;
+    }
+}
+
+.vertical-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.service-box {
+    max-width: 400px;
+    margin: 50px auto 0;
+}
+
+@media (min-width: 992px) {
+    .service-box {
+        margin: 20px auto 0;
+    }
+}
+
+.service-box p {
+    margin-bottom: 0;
+}
+
+.call-to-action {
+    padding: 50px 0;
+}
+
+.call-to-action h2 {
+    margin: 0 auto 20px;
+}
+
+.text-primary {
+    color: #33A2AA !important;
+}
+
+.cta-color {
+    color: #E37222;
+}
+
+.brand-color {
+    color: #008B95;
+}
+
+.no-gutter > [class*='col-'] {
+    padding-right: 0;
+    padding-left: 0;
+}
+
+.btn-default {
+    color: white;
+    background-color: #E37222;
+    border-color: white;
+}
+
+.btn-default:focus,
+.btn-default.focus {
+    color: white;
+    background-color: #E37222;
+    border-color: #E37222;
+}
+
+.btn-default:hover {
+    color: #222222;
+    background-color: #e6e6e6;
+    border-color: #e0e0e0;
+}
+
+.btn-default:active,
+.btn-default.active,
+.open > .btn-default.dropdown-toggle {
+    color: #222222;
+    background-color: #e6e6e6;
+    border-color: #e0e0e0;
+}
+
+.btn-default:active:hover,
+.btn-default:active:focus,
+.btn-default:active.focus,
+.btn-default.active:hover,
+.btn-default.active:focus,
+.btn-default.active.focus,
+.open > .btn-default.dropdown-toggle:hover,
+.open > .btn-default.dropdown-toggle:focus,
+.open > .btn-default.dropdown-toggle.focus {
+    color: #222222;
+    background-color: #d4d4d4;
+    border-color: #bfbfbf;
+}
+
+.btn-default:active,
+.btn-default.active,
+.open > .btn-default.dropdown-toggle {
+    background-image: none;
+}
+
+.btn-default.disabled:hover,
+.btn-default.disabled:focus,
+.btn-default.disabled.focus,
+.btn-default[disabled]:hover,
+.btn-default[disabled]:focus,
+.btn-default[disabled].focus,
+fieldset[disabled] .btn-default:hover,
+fieldset[disabled] .btn-default:focus,
+fieldset[disabled] .btn-default.focus {
+    background-color: white;
+    border-color: white;
+}
+
+.btn-default .badge {
+    color: white;
+    background-color: #222222;
+}
+
+.btn-primary {
+    color: white;
+    background-color: #33A2AA;
+    border-color: #33A2AA;
+}
+
+.btn-primary:focus,
+.btn-primary.focus {
+    color: white;
+    background-color: #eb3812;
+    border-color: #a4270d;
+}
+
+.btn-primary:hover {
+    color: white;
+    background-color: #eb3812;
+    border-color: #e13612;
+}
+
+.btn-primary:active,
+.btn-primary.active,
+.open > .btn-primary.dropdown-toggle {
+    color: white;
+    background-color: #eb3812;
+    border-color: #e13612;
+}
+
+.btn-primary:active:hover,
+.btn-primary:active:focus,
+.btn-primary:active.focus,
+.btn-primary.active:hover,
+.btn-primary.active:focus,
+.btn-primary.active.focus,
+.open > .btn-primary.dropdown-toggle:hover,
+.open > .btn-primary.dropdown-toggle:focus,
+.open > .btn-primary.dropdown-toggle.focus {
+    color: white;
+    background-color: #c93110;
+    border-color: #a4270d;
+}
+
+.btn-primary:active,
+.btn-primary.active,
+.open > .btn-primary.dropdown-toggle {
+    background-image: none;
+}
+
+.btn-primary.disabled:hover,
+.btn-primary.disabled:focus,
+.btn-primary.disabled.focus,
+.btn-primary[disabled]:hover,
+.btn-primary[disabled]:focus,
+.btn-primary[disabled].focus,
+fieldset[disabled] .btn-primary:hover,
+fieldset[disabled] .btn-primary:focus,
+fieldset[disabled] .btn-primary.focus {
+    background-color: #33A2AA;
+    border-color: #33A2AA;
+}
+
+.btn-primary .badge {
+    color: #33A2AA;
+    background-color: white;
+}
+
+.btn {
+    font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
+    border: none;
+    border-radius: 300px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.btn-xl {
+    padding: 15px 30px;
+}
+
+
+/* Text field with tick */
+
+.check-container i {
+    padding-right: 10px;
+    padding-bottom: 15px;
+}
+
+.check-container {
+    font-size: 22px;
+}
+
+
+/* Main Form Layout */
+
+#main-form {
+    padding: 20px;
+      -webkit-box-shadow: 0 8px 6px -6px black;
+     -moz-box-shadow: 0 8px 6px -6px black;
+          box-shadow: 0 8px 6px -6px black;
+}
+
+#main-form .row {
+    padding: 5px;
+}
+
+.form-headline {
+    font-size: 25px;
+    display: block;
+    margin: 0 auto;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.form-subheadline {
+    font-style: italic;
+}
+
+.form-legend {
+    font-style: italic;
+    font-size: 12px;
+}
+
+.form-error {
+    color: #ffc1c1;
+    text-transform: uppercase;
+}
+
+.form-control::-webkit-input-placeholder {
+    color: #999999;
+}
+
+.form-control:-moz-placeholder {
+    color: #999999;
+}
+
+.form-control::-moz-placeholder {
+    color: #999999;
+}
+
+.form-control:-ms-input-placeholder {
+    color: #999999;
+}
+
+
+/* Fix for Firefox - dropdown arrow */
+
+select {
+    -moz-appearance: none;
+    text-indent: 0.01px;
+    text-overflow: '';
+}
+
+.form-button {
+    width: 100%;
+    border-radius: 0;
+    padding: 20px;
+}
+
+
+/* Added from Bootstrap v4 Blog layout */
+
+
+/*
+ * Blog name and description for bootstrap
+ */
+
+.blog-header {
+    padding-bottom: 1.25rem;
+    margin-bottom: 2rem;
+    border-bottom: .05rem solid #eee;
+}
+
+.blog-title {
+    margin-bottom: 0;
+    font-size: 2rem;
+    font-weight: normal;
+}
+
+.blog-description {
+    font-size: 1.1rem;
+    color: #999;
+}
+
+@media (min-width: 40em) {
+    .blog-title {
+        font-size: 3.5rem;
+    }
+}
+
+
+/*
+ * Main column and sidebar layout for Bootstrap
+ */
+
+
+/* Sidebar modules for boxing content */
+
+.sidebar-module {
+    padding: 1rem;
+    /*margin: 0 -1rem 1rem;*/
+}
+
+.sidebar-module-inset {
+    padding: 1rem;
+    background-color: #f5f5f5;
+    border-radius: .25rem;
+}
+
+.sidebar-module-inset p:last-child,
+.sidebar-module-inset ul:last-child,
+.sidebar-module-inset ol:last-child {
+    margin-bottom: 0;
+}
+
+
+/* Pagination */
+
+.blog-pagination {
+    margin-bottom: 4rem;
+}
+
+.blog-pagination > .btn {
+    border-radius: 2rem;
+}
+
+
+/*
+ * Blog posts from Bootstrap Blog
+ */
+
+.blog-post {
+    margin-bottom: 4rem;
+    margin-top: 3rem;
+}
+
+.blog-post-title {
+    margin-bottom: .25rem;
+    font-size: 2.5rem;
+}
+
+.blog-post-meta {
+    margin-bottom: 1.25rem;
+    color: #999;
+}
+
+
+/*
+ * Footer From Bootstrap Blog Template
+ */
+
+.blog-footer a {
+    color: rgba(255, 255, 255, 0.7);
+}
+.blog-footer {
+    padding: 2rem 0;
+    color: #f2f2f2;
+    text-align: center;
+    border-top: .05rem solid #e5e5e5;
+}
+  .footer-menu .nav-item a {
+      padding: 5px;
+      font-size: 0.8em;
+      text-transform: uppercase;
+  }
+    .footer-menu .nav-item a:hover {
+      color: #fff;
+  }
+ .footer-menu .nav-item {
+     display: inline-block;
+     margin-top: 15px;
+ }
+
+.blog-footer p:last-child {
+    margin-bottom: 0;
+}
