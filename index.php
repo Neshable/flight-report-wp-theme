@@ -20,9 +20,10 @@ get_header(); ?>
 		if ( have_posts() ) :
 
 			if ( is_home() && ! is_front_page() ) : ?>
-				<header>
-					<h2 class="blog-post-title"><?php single_post_title(); ?></h2>
-				</header>
+				
+<!-- 				<header>
+					<h2 class="blog-post-title"></h2>
+				</header> -->
 
 			<?php
 			endif;
